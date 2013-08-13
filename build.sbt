@@ -1,5 +1,7 @@
 name := "scala-reflective-utils"
 
+organization := "com.naumen"
+
 scalaVersion := "2.10.2"
 
 version := "0.0.1-SNAPSHOT"
@@ -15,9 +17,4 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
                     "releases"  at "http://oss.sonatype.org/content/repositories/releases")
 
-
 seq(githubRepoSettings: _*)
-
-localRepo := Path.userHome / "github" / "maven"
-
-githubRepo := "git@github.com:NAUMEN-GP/scala-reflective-utils.git"
