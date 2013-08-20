@@ -17,4 +17,6 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 resolvers ++= Seq("snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
                     "releases"  at "http://oss.sonatype.org/content/repositories/releases")
 
-seq(githubRepoSettings: _*)
+resolvers ++= Seq("naumen releases" at "http://NAUMEN-GP.github.io/maven/releases")
+
+resolvers ++= Seq("naumen snapshots" at "http://NAUMEN-GP.github.io/maven/snapshots")
