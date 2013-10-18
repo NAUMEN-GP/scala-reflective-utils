@@ -52,12 +52,15 @@ trait CaseClassMapConverter {
       a + (f.getName -> f.get(cc))
   }
 
+  val OptClass = classOf[Option[_]]
+
   def typesToDefaultValues: Class[_] => Any = {
     //TODO remove doubling
     case java.lang.Boolean.TYPE => java.lang.Boolean.FALSE
     case Integer.TYPE => Integer.valueOf(0)
     case java.lang.Long.TYPE => java.lang.Long.valueOf(0)
     case java.lang.Double.TYPE => java.lang.Double.valueOf(0)
+    case OptClass => None
     case _ => null
   }
 
